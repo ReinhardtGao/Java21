@@ -15,5 +15,11 @@ class MarsApplication {
         System.out.println("Checking the temperature");
         spirit.checkTemperature();
         spirit.showAttributes();
+
+        MarsRobot opportunity = new MarsRobot();
+        opportunity.status = "exploring";
+        opportunity.speed = 4;
+        opportunity.temperature = -80;
+        opportunity.showAttributes();
     }
 }
