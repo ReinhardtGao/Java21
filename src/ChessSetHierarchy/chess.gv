@@ -1,0 +1,17 @@
+graph chess {
+    ChessPiece -- King;
+    ChessPiece -- Queen;
+    ChessPiece -- Rook;
+    ChessPiece -- Bishop;
+    ChessPiece -- Knight;
+    ChessPiece -- Pawn;
+    { rank = same; King; Queen; }
+
+    /*
+    Instance variables color and startingPosition
+    should be defined in the ChessPiece class.
+
+    Instance variables forwardMovement and sideMovement
+    should be defined in each subclass.
+    */
+}
