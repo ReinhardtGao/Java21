@@ -1,6 +1,6 @@
 package com.java21days;
 
-class DayCounter {
+public class DayCounter {
     public static void main(String[] arguments) {
         int yearIn = 2016;
         int monthIn = 1;
@@ -12,7 +12,7 @@ class DayCounter {
             + countDays(monthIn, yearIn) + " days.");
     }
 
-    static int countDays(int month, int year) {
+    public static int countDays(int month, int year) {
         int count = -1;
         switch (month) {
             case 1:
