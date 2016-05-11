@@ -3,11 +3,11 @@ package org.cadenhead.ecommerce;
 public class Item implements Comparable {
     private String id;
     private String name;
-    private double retail;
+    protected double retail;
     private int quantity;
-    private double price;
+    protected double price;
 
-    Item(String idIn, String nameIn, String retailIn, String qIn) {
+    protected Item(String idIn, String nameIn, String retailIn, String qIn) {
         id = idIn;
         name = nameIn;
         retail = Double.parseDouble(retailIn);
