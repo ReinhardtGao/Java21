@@ -9,25 +9,30 @@ public class ComicBooks {
 
     public static void main(String[] arguments) {
         // set up hash map
-        HashMap quality = new HashMap();
-        quality.put("pristine mint", 5F);
-        quality.put("mint", 3.00F);
-        quality.put("near mint", 2.00F);
-        quality.put("very fine", 1.50F);
-        quality.put("fine", 1.00F);
-        quality.put("good", 0.50F);
-        quality.put("poor", 0.25F);
-        quality.put("coverless", 0.10F);
+        HashMap<Conditions, Float> quality = new HashMap<>();
+        quality.put(Conditions.PRISTINE_MINT, 5F);
+        quality.put(Conditions.MINT, 3.00F);
+        quality.put(Conditions.NEAR_MINT, 2.00F);
+        quality.put(Conditions.VERY_FINE, 1.50F);
+        quality.put(Conditions.FINE, 1.00F);
+        quality.put(Conditions.GOOD, 0.50F);
+        quality.put(Conditions.POOR, 0.25F);
+        quality.put(Conditions.COVERLESS, 0.10F);
         // set up collection
         Comic[] comix = new Comic[5];
-        comix[0] = new Comic("Amazing Spider-Man", "1A", "very fine", 12_000.00F);
-        comix[1] = new Comic("Incredible Hulk", "181", "near mint", 680.00F);
-        comix[2] = new Comic("Cerebus", "1A", "good", 190.00F);
-        comix[3] = new Comic("Blue Moon", "142", "pristine mint", 48_000.00F);
-        comix[4] = new Comic("The Walking Dead", "5A", "coverless", 1_000.00F);
+        comix[0] = new Comic("Amazing Spider-Man", "1A",
+            Conditions.VERY_FINE, 12_000.00F);
+        comix[1] = new Comic("Incredible Hulk", "181",
+            Conditions.NEAR_MINT, 680.00F);
+        comix[2] = new Comic("Cerebus", "1A",
+            Conditions.GOOD, 190.00F);
+        comix[3] = new Comic("Blue Moon", "142",
+            Conditions.PRISTINE_MINT, 48_000.00F);
+        comix[4] = new Comic("The Walking Dead", "5A",
+            Conditions.COVERLESS, 1_000.00F);
         // set up prices
         for (int i = 0; i < comix.length; i++) {
-            comix[i].setPrice( (Float) quality.get(comix[i].condition) );
+            comix[i].setPrice(quality.get(comix[i].condition));
         }
         // display collection
         for (int i = 0; i < comix.length; i++) {
@@ -42,12 +47,12 @@ public class ComicBooks {
 class Comic {
     String title;
     String issueNumber;
-    String condition;
+    Conditions condition;
     float basePrice;
     float price;
 
     Comic(String inTitle, String inIssueNumber,
-        String inCondition, float inBasePrice) {
+        Conditions inCondition, float inBasePrice) {
 
         title = inTitle;
         issueNumber = inIssueNumber;
@@ -58,4 +63,15 @@ class Comic {
     void setPrice(float factor) {
         price = basePrice * factor;
     }
+}
+
+enum Conditions {
+    PRISTINE_MINT,
+    MINT,
+    NEAR_MINT,
+    VERY_FINE,
+    FINE,
+    GOOD,
+    POOR,
+    COVERLESS
 }
