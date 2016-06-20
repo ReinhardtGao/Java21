@@ -17,7 +17,7 @@ public class Finger {
             System.out.println("Usage: java Finger user@host");
             return;
         }
-        try (Socket digit = new Socket(host, 79);
+        try (Socket digit = new Socket(host, 1079);
             BufferedReader in = new BufferedReader(
                 new InputStreamReader(digit.getInputStream()));
             ) {
