@@ -12,7 +12,7 @@ public class QuoteData {
         ticker = inTicker;
     }
 
-    private String retrieveQuote() {
+    protected String retrieveQuote() {
         StringBuilder builder = new StringBuilder();
         try {
             URL page = new URL(
