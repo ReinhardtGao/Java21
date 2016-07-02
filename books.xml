@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <book>
+        <title>A Game of Thrones</title>
+        <author>George R. R. Martin</author>
+        <year>1996</year>
+    </book>
+    <book>
+        <title>A Song for Lya and Other Stories</title>
+        <author>George R. R. Martin</author>
+        <year>1976</year>
+    </book>
+    <book>
+        <title>A Feast for Crows</title>
+        <author>George R. R. Martin</author>
+        <year>2005</year>
+    </book>
+    <book>
+        <title>The Martian</title>
+        <author>Andy Weir</author>
+        <year>2011</year>
+    </book>
+    <book>
+        <title>Catch-22</title>
+        <author>Joseph Heller</author>
+        <year>1961</year>
+    </book>
+</root>
