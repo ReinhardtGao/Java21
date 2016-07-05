@@ -29,15 +29,15 @@ public class SantaActivity extends AppCompatActivity {
         switch (id) {
             case (R.id.imageButton):
                 action = new Intent(Intent.ACTION_DIAL,
-                        Uri.parse("tel:877-446-6723"));
+                        Uri.parse("tel:212-998-3282"));
                 break;
             case (R.id.imageButton2):
                 action = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("http://www.noradsanta.org"));
+                        Uri.parse("http://yann.lecun.com/"));
                 break;
             case (R.id.imageButton3):
                 action = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse("geo:0,0?q=101 Saint Nicholas Dr., North Pole, AK"));
+                        Uri.parse("geo:715 Broadway, New York, NY 10012, USA"));
                 break;
             default:
                 break;
