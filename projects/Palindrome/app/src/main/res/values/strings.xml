@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Palindrome</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Sit on a Potato, Otis!</string>
+</resources>
